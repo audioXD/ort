@@ -398,7 +398,7 @@ fn try_setup_with_pkg_config() -> bool {
 
 			// Setting the libraries to link against
 			for lib in lib.libs {
-				println!("cargo:rustc-link-lib={}", lib);
+				println!("cargo:rustc-link-lib=dylib={}", lib);
 			}
 
 			println!("Using onnxruntime found by pkg-config.");
